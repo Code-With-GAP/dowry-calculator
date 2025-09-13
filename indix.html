@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>( Dowrry Gift calculation app) </title>
+    <style>
+    
+    body{
+        padding: 10px;
+        background-color: #a5d6a7; 
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    button{
+        height: 35px;
+        width: 170px;
+        background-color: black;
+        color: beige;
+        font-weight: 600;
+        font-size: 14px;
+        cursor: pointer;
+        border-radius: 12px;
+        
+    }
+
+    .container{
+        margin-top: 15px;
+        width: 100%;
+        max-width: 600px;
+        background: white;
+        border: 2px solid whitesmoke;
+        height: auto;
+        border-radius: 10px;
+        box-shadow: 5px 8px 8px grey;
+    }
+
+     input{
+        height: 40px;
+        border: 1px  solid black;
+        font-weight: 800;
+        margin: 10px;
+        border-radius: 10px;
+        text-align: center;
+        box-shadow:  5px 5px 8px grey;
+
+    }
+
+   
+
+    h2{
+        margin-left: 20px;
+        
+    }
+
+
+    
+ 
+
+    .calculateButton{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 50px;
+    }
+
+    .first{
+        display: flex;
+        justify-content: space-between;
+        margin: 20px;
+    }
+
+    .second{
+       display: flex;
+       justify-content: space-between;
+       margin: 20px;
+    }
+
+    .third{
+       display: flex;
+       justify-content: space-between;
+       margin: 20px;
+    }
+
+
+    p{
+        text-align: center;
+        font-size: 40px;
+    }
+
+    .result{
+        text-align: center;
+        font-size: larger;
+    } 
+
+
+       
+         @media (max-width: 600px) {
+            body {
+                padding: 10px;
+                background-color: #a5d6a7;
+                justify-content: flex-start;
+                align-items: flex-start;
+            }
+
+            .container {
+                width: 100%;
+                max-width: 100%;
+                height: auto;
+            }
+
+            .first, .second, .third {
+                display: flex;
+                flex-direction: column; 
+                justify-content: flex-start;
+                align-items: flex-start;
+            }
+
+            .first input, .second input, .third input {
+                width: 100%; 
+            }
+
+            button {
+                width: 100%; 
+            }
+
+            h2 {
+                font-size: 1.5rem; 
+            }
+        }
+
+         @media (max-width: 600px) {
+            body {
+                padding: 10px;
+                justify-content: flex-start;
+                align-items: flex-start;
+            }
+
+            .container {
+                width: 100%;
+                max-width: 100%;
+                height: auto;
+            }
+
+            .first, .second, .third {
+                display: flex;
+                flex-direction: column; 
+                justify-content: flex-start;
+                align-items: flex-start;
+            }
+
+            .first input, .second input, .third input {
+                width: 100%; 
+            }
+
+            button {
+                width: 100%; 
+            }
+
+            h2 {
+                font-size: 1.5rem; 
+            }
+        }
+
+        
+        @media (min-width: 1024px) {
+            .first input, .second input, .third input {
+                width: 85%; 
+            }
+
+            h2 {
+                font-size: 2rem; 
+            }
+        } 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </style>
+</head>
+<body>
+    
+   <div class="container">
+
+    <h2>How much dowry you worth of!?</h2>
+
+         <div class="first">
+        <div class="age">
+            <label for="Age">Age</label> <br>
+           
+            <input list="age" id="Age" name="Age" placeholder="Age" />
+            <datalist id="age">
+            <option value="" disabled selected>Select your age</option>
+            <option value="18-20"></option>
+            <option value="21-25"></option>
+            <option value="25-35"></option>
+            <option value="35  and Above"></option>
+           
+        </div>
+
+        <div class="Profession">
+            
+            <label for="profession">Profession:</label><br />
+            <input list="professions" id="profession" name="profession" placeholder="Profession" />
+            <datalist id="professions">
+            <option value="Doctor">
+            <option value="Engineer">
+            <option value="Pilot">
+            <option value="Teacher">
+            <option value="Labour">
+            </datalist>
+        </div>
+
+         </div>
+
+         <div class="second">
+            <div class="Salary">
+            <label for="Salary">Monthly Salary</label> <br>
+            <input list="Salaries" id="salary" name="salary" placeholder="Salary" />
+            <datalist id="Salaries">
+            <option value="20k-30k"></option>
+            <option value="30k-50k"></option>
+            <option value="50k-100k"></option>
+            <option value="100k  and Above"></option>
+            </div>
+
+            <div class="Education">
+            <label for="education">Education Level</label><br>
+            <input list="educationLevels" id="education" name="education" placeholder="Education" />
+            <datalist id="educationLevels">
+            <option value="High School">High School</option>
+            <option value="Diploma">Diploma</option>
+            <option value="Bachelor's Degree">Bachelor's Degree</option>
+            <option value="Master's Degree">Master's Degree</option>
+            <option value="PhD">PhD</option>
+            <option value="Other">Other</option>
+            </datalist>
+            </div>
+
+
+         </div>
+
+         <div class="third">
+            
+
+            <div class="Country">
+                <label for="Country">Country</label><br>
+                <input list="Country1" id="country"
+                name="country" placeholder="Select">
+                <datalist id="Country1">
+                <option value="INDIA"></option>
+                <option value="USA"></option>
+                <option value="RUSSIA"></option>
+                <option value="CHINA"></option>
+                <option value="NEPAL"></option>
+                <option value="Other"></option>
+                 </datalist>
+            </div>
+
+
+            <div class="Residence">
+                <label for="residence">Residence</label> <br>
+                <input list="residence1" id="residence" name="residence" placeholder="Select" />
+                <datalist id="residence1">
+                    <option value="Rajasthan"></option>
+                <option value="Haryana"></option>
+                <option value="New Delhi"></option>
+                <option value="Mumbai"></option>
+                <option value="Hong kong"></option>
+                <option value="NY"></option>
+                <option value="Other"></option>
+            </div>
+
+
+         </div>
+
+         <p class="alert"></p>
+
+         <div class="result" id="result">
+
+        </div>
+
+         <div class="calculateButton">
+            <button class="calculate">Calculate Now</button>
+            <button class="reset">Reset</button>
+        </div>
+
+        
+
+   </div>
+
+
+</body>
+<script src="script.js"></script>
+</html>
